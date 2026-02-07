@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Muros
   - Interactuable
+  - BotePepi
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ public class barraPepinillo : MonoBehaviour
     [SerializeField] Slider barra;
     [SerializeField] float valorClick = 1f;
     [SerializeField] float valorPerdida = -1f;
-    public bool esClickable = true;
+    public bool esClickable = false;
 
     void awake()
     {
@@ -27,4 +27,5 @@ public class barraPepinillo : MonoBehaviour
     {
         barra.value += valor;
     }
+
 }

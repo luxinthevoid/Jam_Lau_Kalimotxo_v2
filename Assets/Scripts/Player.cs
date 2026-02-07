@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -8,8 +9,10 @@ public class Player : MonoBehaviour
     private Vector2 target;
     private Camera cam;
     private Collider2D objetoActual;
-    bool eventoActivo = true;
+    public bool eventoActivo = false;
     bool puedesMoverte = true;
+    [SerializeField] barraPepinillo barraPep;
+    [SerializeField] eventosHandler eventosHand;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,12 +34,23 @@ public class Player : MonoBehaviour
         {
             objetoActual = other;
         }
+        if (other.CompareTag("BotePepi") && !eventoActivo)
+        {
+            //esClickeable viene del script barraPepinillo del objeto barraPepinillo
+            barraPep.esClickable = true;
+            Debug.Log("Se puede abrir");
+
+        }
     }
+
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other == objetoActual) 
+        if (other == objetoActual)
             objetoActual = null;
+        //esClickeable viene del script barraPepinillo del objeto barraPepinillo
+        barraPep.esClickable = false;
+        Debug.Log("No se puede abrir");
     }
 
     // Update is called once per frame
@@ -52,6 +66,8 @@ public class Player : MonoBehaviour
                     script.activated = false;
                     puedesMoverte = true;
                     Debug.Log("Terminamos minijuego - Movimiento restaurado");
+                    eventosHand.finEvento = true;
+                    eventosHand.enMinijuego = false;
                 }
             }
             return; // Salimos del Update para que no se mueva mientras pulsa W
@@ -66,6 +82,7 @@ public class Player : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame && objetoActual != null && eventoActivo)
         {
             ManageInteractuable();
+            barraPep.esClickable = false;
         }
 
 
@@ -81,8 +98,10 @@ public class Player : MonoBehaviour
         if (scriptObjeto != null && scriptObjeto.activated)
         {
             puedesMoverte = false; // Bloqueamos el movimiento
+            eventosHand.enMinijuego = true;
             target = transform.position; // Frenamos en seco
             Debug.Log("Entramos minijuego - Pulsa W para salir");
         }
     }
+
 }

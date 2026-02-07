@@ -6,14 +6,18 @@ using UnityEngine;
 public class eventosHandler : MonoBehaviour
 {
     [SerializeField] barraPepinillo barraPep;
+    [SerializeField] Player player;
     [SerializeField] float tiempoEntreEventos = 10f;
     [SerializeField] float elapsedTime = 0f;
-    [SerializeField] float finDeEvento = 16f;
+    [SerializeField] float finDeEventoTiempo = 16f;
     [SerializeField] float tiempoEnEvento = 0f;
     [SerializeField] bool completado = false;
     [SerializeField] bool enEvento = false;
     [SerializeField] public List<Interactuable> listaDeEventos = new List<Interactuable>();
     [SerializeField] float recompensa;
+    public bool finEvento = false;
+    public bool enMinijuego = false;
+
 
     void Update()
     {
@@ -25,6 +29,7 @@ public class eventosHandler : MonoBehaviour
                 completado = false;
                 barraPep.esClickable = false;
                 enEvento = true;
+                player.eventoActivo= enEvento;
                 int randomEvent = Random.Range(0, listaDeEventos.Count);
                 StartCoroutine(startEvent(randomEvent));
             }
@@ -39,25 +44,34 @@ public class eventosHandler : MonoBehaviour
         Debug.Log("evento "+randomEvent+ " activado");
         randomEvent--;
 
-        while (!completado && tiempoEnEvento < finDeEvento)
+        while (!completado)
         {
+            if(enMinijuego)
             tiempoEnEvento += Time.deltaTime;
 
-            if (Input.GetKeyDown(KeyCode.W))
+            if (finEvento)
             {
+                finEvento = false;
                 completado = true;
                 //recompensa = 20f;
             }
 
             yield return null;
         }
-        if (!completado) recompensa = -10f;
+        if(tiempoEnEvento > finDeEventoTiempo)
+        {
+            //castigo por tardon
+            Debug.Log("Castigo por tardon");
+
+            recompensa = -10f;
+        }
 
         barraPep.Progreso(recompensa);
         tiempoEnEvento = 0f;
         elapsedTime = 0f;
         barraPep.esClickable = true;
         enEvento = false;
+        player.eventoActivo = enEvento;
     }
 
 }
