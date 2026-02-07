@@ -12,12 +12,19 @@ public class Player : MonoBehaviour
     bool puedesMoverte = true;
     [SerializeField] barraPepinillo barraPep;
     [SerializeField] eventosHandler eventosHand;
+
+    // Nuevo: referencia al Rigidbody2D
+    private Rigidbody2D rb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
-        target = transform.position;
+        target = rb.position;
+
     }
+
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
 
@@ -27,6 +34,7 @@ public class Player : MonoBehaviour
     //        target = transform.position;
     //    }
     //}
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Interactuable"))
@@ -77,20 +85,26 @@ public class Player : MonoBehaviour
         {
             Console.WriteLine("EventoRaton");
             Vector2 pos = Mouse.current.position.ReadValue();
-            target = cam.ScreenToWorldPoint(pos);
+            Vector3 worldPos = cam.ScreenToWorldPoint(pos);
+            target = worldPos;
             Console.WriteLine("Posicion objetivo:" + target);
         }
         if (Mouse.current.leftButton.wasPressedThisFrame && objetoActual != null && eventoActivo)
         {
             ManageInteractuable();
         }
+    }
 
-
-        if (puedesMoverte)
+    void FixedUpdate()
+    {
+        // Movimiento físico usando Rigidbody2D para evitar jittering
+        if (puedesMoverte && rb != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            Vector2 nuevaPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+            rb.MovePosition(nuevaPos);
         }
     }
+
     void ManageInteractuable()
     {
         Interactuable scriptObjeto = objetoActual.GetComponent<Interactuable>();
@@ -99,8 +113,9 @@ public class Player : MonoBehaviour
         {
             puedesMoverte = false; // Bloqueamos el movimiento
             eventosHand.enMinijuego = true;
-            target = transform.position; // Frenamos en seco
-                                         //Debug.Log("Entramos minijuego - Pulsa W para salir");
+            // Frenamos en seco usando la posición del rigidbody
+            target = rb.position;
+            //Debug.Log("Entramos minijuego - Pulsa W para salir");
 
         }
     }
