@@ -18,15 +18,15 @@ public class Player : MonoBehaviour
         cam = Camera.main;
         target = transform.position;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
 
-        if (collision.gameObject.CompareTag("Muros"))
-        {
-            //Debug.Log("¡Colisión física detectada con: " + collision.gameObject.name);
-            target = transform.position;
-        }
-    }
+    //    if (collision.gameObject.CompareTag("Muros"))
+    //    {
+    //        //Debug.Log("¡Colisión física detectada con: " + collision.gameObject.name);
+    //        target = transform.position;
+    //    }
+    //}
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Interactuable"))
