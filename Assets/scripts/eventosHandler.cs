@@ -9,142 +9,178 @@ public class eventosHandler : MonoBehaviour
     [SerializeField] float finDeEvento = 16f;
     [SerializeField] float tiempoEnEvento = 0f;
     [SerializeField] bool completado = false;
+    [SerializeField] bool enEvento = false;
+
+    [SerializeField] float recompensa;
 
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        if (elapsedTime >= tiempoEntreEventos - 0.5f)
+        if (!enEvento)
         {
-            completado = false;
-            int randomEvent = Random.Range(1, 7);
-            if (randomEvent == 1) evento1();
-            else if (randomEvent == 2) evento2();
-            else if (randomEvent == 3) evento3();
-            else if (randomEvent == 4) evento4();
-            else if (randomEvent == 5) evento5();
-            else evento6();
-        }
-        if (elapsedTime >= tiempoEntreEventos)
-        {
-            barraPep.esClickable = false;
-        }
-    }
-
-    void evento1()
-    {
-        if (Input.GetKeyDown("w"))
-        {
-            completado = true;
-        }
-        tiempoEnEvento += Time.deltaTime;
-        if (completado)
-        {
-            barraPep.Progreso(20f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
-        }
-        if (!completado && tiempoEnEvento >= finDeEvento)
-        {
-            barraPep.Progreso(-10f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= tiempoEntreEventos)
+            {
+                completado = false;
+                barraPep.esClickable = false;
+                enEvento = true;
+                int randomEvent = Random.Range(1, 7);
+                if (randomEvent == 1) StartCoroutine(evento1());
+                else if (randomEvent == 2) StartCoroutine(evento2());
+                else if (randomEvent == 3) StartCoroutine(evento3());
+                else if (randomEvent == 4) StartCoroutine(evento4());
+                else if (randomEvent == 5) StartCoroutine(evento5());
+                else StartCoroutine(evento6());
+            }
         }
     }
 
-    void evento2()
+    IEnumerator evento1()
     {
-        tiempoEnEvento += Time.deltaTime;
-        if (completado)
+        Debug.Log("evento 1");
+        while (!completado && tiempoEnEvento < finDeEvento)
         {
-            barraPep.Progreso(20f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
+            tiempoEnEvento += Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                completado = true;
+                recompensa = 20f;
+            }
+
+            yield return null;
         }
-        if (!completado && tiempoEnEvento >= finDeEvento)
-        {
-            barraPep.Progreso(-10f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
-        }
+
+        if (!completado) recompensa = -10f;
+
+        barraPep.Progreso(recompensa);
+        tiempoEnEvento = 0f;
+        elapsedTime = 0f;
+        barraPep.esClickable = true;
+        enEvento = false;
     }
 
-    void evento3()
+    IEnumerator evento2()
     {
-        tiempoEnEvento += Time.deltaTime;
-        if (completado)
+        Debug.Log("evento 2");
+        while (!completado && tiempoEnEvento < finDeEvento)
         {
-            barraPep.Progreso(20f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
+            tiempoEnEvento += Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                completado = true;
+                recompensa = 20f;
+            }
+
+            yield return null;
         }
-        if (!completado && tiempoEnEvento >= finDeEvento)
-        {
-            barraPep.Progreso(-10f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
-        }
+
+        if (!completado) recompensa = -10f;
+
+        barraPep.Progreso(recompensa);
+        tiempoEnEvento = 0f;
+        elapsedTime = 0f;
+        barraPep.esClickable = true;
+        enEvento = false;
     }
 
-    void evento4()
+    IEnumerator evento3()
     {
-        tiempoEnEvento += Time.deltaTime;
-        if (completado)
+        Debug.Log("evento 3");
+        while (!completado && tiempoEnEvento < finDeEvento)
         {
-            barraPep.Progreso(20f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
+            tiempoEnEvento += Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                completado = true;
+                recompensa = 20f;
+            }
+
+            yield return null;
         }
-        if (!completado && tiempoEnEvento >= finDeEvento)
-        {
-            barraPep.Progreso(-10f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
-        }
+
+        if (!completado) recompensa = -10f;
+
+        barraPep.Progreso(recompensa);
+        tiempoEnEvento = 0f;
+        elapsedTime = 0f;
+        barraPep.esClickable = true;
+        enEvento = false;
     }
 
-    void evento5()
+    IEnumerator evento4()
     {
-        tiempoEnEvento += Time.deltaTime;
-        if (completado)
+        Debug.Log("evento 4");
+        while (!completado && tiempoEnEvento < finDeEvento)
         {
-            barraPep.Progreso(20f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
+            tiempoEnEvento += Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                completado = true;
+                recompensa = 20f;
+            }
+
+            yield return null;
         }
-        if (!completado && tiempoEnEvento >= finDeEvento)
-        {
-            barraPep.Progreso(-10f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
-        }
+
+        if (!completado) recompensa = -10f;
+
+        barraPep.Progreso(recompensa);
+        tiempoEnEvento = 0f;
+        elapsedTime = 0f;
+        barraPep.esClickable = true;
+        enEvento = false;
     }
 
-    void evento6()
+    IEnumerator evento5()
     {
-        tiempoEnEvento += Time.deltaTime;
-        if (completado)
+        Debug.Log("evento 5");
+        while (!completado && tiempoEnEvento < finDeEvento)
         {
-            barraPep.Progreso(20f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
+            tiempoEnEvento += Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                completado = true;
+                recompensa = 20f;
+            }
+
+            yield return null;
         }
-        if (!completado && tiempoEnEvento >= finDeEvento)
+
+        if (!completado) recompensa = -10f;
+
+        barraPep.Progreso(recompensa);
+        tiempoEnEvento = 0f;
+        elapsedTime = 0f;
+        barraPep.esClickable = true;
+        enEvento = false;
+    }
+
+    IEnumerator evento6()
+    {
+        Debug.Log("evento 6");
+        while (!completado && tiempoEnEvento < finDeEvento)
         {
-            barraPep.Progreso(-10f);
-            tiempoEnEvento = 0f;
-            elapsedTime = 0f;
-            barraPep.esClickable = true;
+            tiempoEnEvento += Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                completado = true;
+                recompensa = 20f;
+            }
+
+            yield return null;
         }
+
+        if (!completado) recompensa = -10f;
+
+        barraPep.Progreso(recompensa);
+        tiempoEnEvento = 0f;
+        elapsedTime = 0f;
+        barraPep.esClickable = true;
+        enEvento = false;
     }
 }
