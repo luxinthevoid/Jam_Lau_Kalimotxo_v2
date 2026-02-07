@@ -20,7 +20,7 @@ public class Interactuable : MonoBehaviour
     public void Accion()
     {
         activated = !activated;
-        Debug.Log("Objeto " + gameObject.name + " ahora está: " + activated);
+        //Debug.Log("Objeto " + gameObject.name + " ahora está: " + activated);
     }
 
     void Update()

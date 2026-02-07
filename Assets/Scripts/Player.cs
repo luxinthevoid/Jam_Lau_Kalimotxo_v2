@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -21,10 +20,10 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("¡Colisión física detectada con: " + collision.gameObject.name);
 
         if (collision.gameObject.CompareTag("Muros"))
         {
+            //Debug.Log("¡Colisión física detectada con: " + collision.gameObject.name);
             target = transform.position;
         }
     }
@@ -38,7 +37,7 @@ public class Player : MonoBehaviour
         {
             //esClickeable viene del script barraPepinillo del objeto barraPepinillo
             barraPep.esClickable = true;
-            Debug.Log("Se puede abrir");
+            //Debug.Log("Se puede abrir");
 
         }
     }
@@ -50,7 +49,7 @@ public class Player : MonoBehaviour
             objetoActual = null;
         //esClickeable viene del script barraPepinillo del objeto barraPepinillo
         barraPep.esClickable = false;
-        Debug.Log("No se puede abrir");
+        //Debug.Log("No se puede abrir");
     }
 
     // Update is called once per frame
@@ -58,18 +57,20 @@ public class Player : MonoBehaviour
     {
         if (!puedesMoverte && objetoActual != null)
         {
-            if (Keyboard.current.wKey.wasPressedThisFrame)
+
+            Interactuable script = objetoActual.GetComponent<Interactuable>();
+            if (script != null)
             {
-                Interactuable script = objetoActual.GetComponent<Interactuable>();
-                if (script != null)
+                //Debug.Log("Terminamos minijuego - Movimiento restaurado");
+                eventosHand.finEvento = true;
+                eventosHand.enMinijuego = false;
+                if (eventosHand.finEvento == true &&
+                eventosHand.enMinijuego == false)
                 {
-                    script.activated = false;
                     puedesMoverte = true;
-                    Debug.Log("Terminamos minijuego - Movimiento restaurado");
-                    eventosHand.finEvento = true;
-                    eventosHand.enMinijuego = false;
                 }
             }
+
             return; // Salimos del Update para que no se mueva mientras pulsa W
         }
         if (Mouse.current.rightButton.wasPressedThisFrame && puedesMoverte)
@@ -82,7 +83,6 @@ public class Player : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame && objetoActual != null && eventoActivo)
         {
             ManageInteractuable();
-            barraPep.esClickable = false;
         }
 
 
@@ -100,7 +100,8 @@ public class Player : MonoBehaviour
             puedesMoverte = false; // Bloqueamos el movimiento
             eventosHand.enMinijuego = true;
             target = transform.position; // Frenamos en seco
-            Debug.Log("Entramos minijuego - Pulsa W para salir");
+                                         //Debug.Log("Entramos minijuego - Pulsa W para salir");
+
         }
     }
 

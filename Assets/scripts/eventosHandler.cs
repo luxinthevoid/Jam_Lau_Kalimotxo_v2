@@ -6,6 +6,7 @@ using UnityEngine;
 public class eventosHandler : MonoBehaviour
 {
     [SerializeField] barraPepinillo barraPep;
+    [SerializeField] ActivarEvento actEv;
     [SerializeField] Player player;
     [SerializeField] float tiempoEntreEventos = 10f;
     [SerializeField] float elapsedTime = 0f;
@@ -17,6 +18,7 @@ public class eventosHandler : MonoBehaviour
     [SerializeField] float recompensa;
     public bool finEvento = false;
     public bool enMinijuego = false;
+    int cont = 0;
 
 
     void Update()
@@ -29,25 +31,28 @@ public class eventosHandler : MonoBehaviour
                 completado = false;
                 barraPep.esClickable = false;
                 enEvento = true;
-                player.eventoActivo= enEvento;
+                player.eventoActivo = enEvento;
                 int randomEvent = Random.Range(0, listaDeEventos.Count);
-                StartCoroutine(startEvent(randomEvent));
+                StartCoroutine(startEvent(randomEvent));//cambiar por randomEvent cuando termine el testing
+                cont++;
+                Debug.LogWarning($"Se inicia evento corrutina num " + cont);
             }
         }
     }
 
     IEnumerator startEvent(int randomEvent)
     {
-        listaDeEventos[randomEvent].GetComponent<Interactuable>().activated = true;
-        //variamos randomEvent para que se vea bien el log
-        randomEvent++;
-        Debug.Log("evento "+randomEvent+ " activado");
-        randomEvent--;
+        //Debug.LogWarning($"Evento iniciado en eventoHandler: {randomEvent}");
+        actEv.activarEvento(randomEvent);//llamar al script del evento para que se active el evento seleccionado
+        //aviso visual
+        listaDeEventos[randomEvent].GetComponent<Interactuable>().activated = true;//cambia el sprite del box colider
 
+
+        //mientras que no este completado el evento, se va a quedar en este bucle, y se va a ir sumando el tiempo que el jugador tarda en completar el evento una vez el jugador llegue al minijuego
         while (!completado)
         {
-            if(enMinijuego)
-            tiempoEnEvento += Time.deltaTime;
+            if (enMinijuego)
+                tiempoEnEvento += Time.deltaTime;
 
             if (finEvento)
             {
@@ -58,20 +63,28 @@ public class eventosHandler : MonoBehaviour
 
             yield return null;
         }
-        if(tiempoEnEvento > finDeEventoTiempo)
+        Debug.LogWarning($"Evento finalizado en eventoHandler: {randomEvent}");
+
+        if (tiempoEnEvento > finDeEventoTiempo)
         {
             //castigo por tardon
-            Debug.Log("Castigo por tardon");
+            //Debug.Log("Castigo por tardon");
 
             recompensa = -10f;
+        }
+        else
+        {
+            recompensa = 0f;
         }
 
         barraPep.Progreso(recompensa);
         tiempoEnEvento = 0f;
         elapsedTime = 0f;
-        barraPep.esClickable = true;
         enEvento = false;
         player.eventoActivo = enEvento;
+        listaDeEventos[randomEvent].GetComponent<Interactuable>().activated = false;//devuelve el sprite del box colider
+
+
     }
 
 }
