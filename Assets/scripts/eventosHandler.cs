@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 
 public class eventosHandler : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class eventosHandler : MonoBehaviour
     [SerializeField] float tiempoEnEvento = 0f;
     [SerializeField] bool completado = false;
     [SerializeField] bool enEvento = false;
-
+    [SerializeField] public List<Interactuable> listaDeEventos = new List<Interactuable>();
     [SerializeField] float recompensa;
 
     void Update()
@@ -23,20 +25,20 @@ public class eventosHandler : MonoBehaviour
                 completado = false;
                 barraPep.esClickable = false;
                 enEvento = true;
-                int randomEvent = Random.Range(1, 7);
-                if (randomEvent == 1) StartCoroutine(evento1());
-                else if (randomEvent == 2) StartCoroutine(evento2());
-                else if (randomEvent == 3) StartCoroutine(evento3());
-                else if (randomEvent == 4) StartCoroutine(evento4());
-                else if (randomEvent == 5) StartCoroutine(evento5());
-                else StartCoroutine(evento6());
+                int randomEvent = Random.Range(0, listaDeEventos.Count);
+                StartCoroutine(startEvent(randomEvent));
             }
         }
     }
 
-    IEnumerator evento1()
+    IEnumerator startEvent(int randomEvent)
     {
-        Debug.Log("evento 1");
+        listaDeEventos[randomEvent].GetComponent<Interactuable>().activated = true;
+        //variamos randomEvent para que se vea bien el log
+        randomEvent++;
+        Debug.Log("evento "+randomEvent+ " activado");
+        randomEvent--;
+
         while (!completado && tiempoEnEvento < finDeEvento)
         {
             tiempoEnEvento += Time.deltaTime;
@@ -44,12 +46,11 @@ public class eventosHandler : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W))
             {
                 completado = true;
-                recompensa = 20f;
+                //recompensa = 20f;
             }
 
             yield return null;
         }
-
         if (!completado) recompensa = -10f;
 
         barraPep.Progreso(recompensa);
@@ -59,128 +60,4 @@ public class eventosHandler : MonoBehaviour
         enEvento = false;
     }
 
-    IEnumerator evento2()
-    {
-        Debug.Log("evento 2");
-        while (!completado && tiempoEnEvento < finDeEvento)
-        {
-            tiempoEnEvento += Time.deltaTime;
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                completado = true;
-                recompensa = 20f;
-            }
-
-            yield return null;
-        }
-
-        if (!completado) recompensa = -10f;
-
-        barraPep.Progreso(recompensa);
-        tiempoEnEvento = 0f;
-        elapsedTime = 0f;
-        barraPep.esClickable = true;
-        enEvento = false;
-    }
-
-    IEnumerator evento3()
-    {
-        Debug.Log("evento 3");
-        while (!completado && tiempoEnEvento < finDeEvento)
-        {
-            tiempoEnEvento += Time.deltaTime;
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                completado = true;
-                recompensa = 20f;
-            }
-
-            yield return null;
-        }
-
-        if (!completado) recompensa = -10f;
-
-        barraPep.Progreso(recompensa);
-        tiempoEnEvento = 0f;
-        elapsedTime = 0f;
-        barraPep.esClickable = true;
-        enEvento = false;
-    }
-
-    IEnumerator evento4()
-    {
-        Debug.Log("evento 4");
-        while (!completado && tiempoEnEvento < finDeEvento)
-        {
-            tiempoEnEvento += Time.deltaTime;
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                completado = true;
-                recompensa = 20f;
-            }
-
-            yield return null;
-        }
-
-        if (!completado) recompensa = -10f;
-
-        barraPep.Progreso(recompensa);
-        tiempoEnEvento = 0f;
-        elapsedTime = 0f;
-        barraPep.esClickable = true;
-        enEvento = false;
-    }
-
-    IEnumerator evento5()
-    {
-        Debug.Log("evento 5");
-        while (!completado && tiempoEnEvento < finDeEvento)
-        {
-            tiempoEnEvento += Time.deltaTime;
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                completado = true;
-                recompensa = 20f;
-            }
-
-            yield return null;
-        }
-
-        if (!completado) recompensa = -10f;
-
-        barraPep.Progreso(recompensa);
-        tiempoEnEvento = 0f;
-        elapsedTime = 0f;
-        barraPep.esClickable = true;
-        enEvento = false;
-    }
-
-    IEnumerator evento6()
-    {
-        Debug.Log("evento 6");
-        while (!completado && tiempoEnEvento < finDeEvento)
-        {
-            tiempoEnEvento += Time.deltaTime;
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                completado = true;
-                recompensa = 20f;
-            }
-
-            yield return null;
-        }
-
-        if (!completado) recompensa = -10f;
-
-        barraPep.Progreso(recompensa);
-        tiempoEnEvento = 0f;
-        elapsedTime = 0f;
-        barraPep.esClickable = true;
-        enEvento = false;
-    }
 }

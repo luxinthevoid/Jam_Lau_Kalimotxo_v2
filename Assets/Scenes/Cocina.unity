@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 292474138}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,9 +360,10 @@ GameObject:
   - component: {fileID: 439866605}
   - component: {fileID: 439866607}
   - component: {fileID: 439866606}
+  - component: {fileID: 439866608}
   m_Layer: 0
-  m_Name: Square (1)
-  m_TagString: Untagged
+  m_Name: Event2
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -487,6 +488,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &439866608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439866604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3bb18241fed534299eae04ba07e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactuable
+  activated: 0
 --- !u!1 &455260414
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +514,7 @@ GameObject:
   - component: {fileID: 455260416}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -638,7 +652,7 @@ GameObject:
   - component: {fileID: 514997201}
   m_Layer: 0
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -776,7 +790,7 @@ GameObject:
   - component: {fileID: 572569105}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -912,9 +926,10 @@ GameObject:
   - component: {fileID: 578772200}
   - component: {fileID: 578772202}
   - component: {fileID: 578772201}
+  - component: {fileID: 578772203}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: Event0
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1039,6 +1054,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &578772203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578772199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3bb18241fed534299eae04ba07e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactuable
+  activated: 0
 --- !u!1 &626212771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1080,7 @@ GameObject:
   - component: {fileID: 626212773}
   m_Layer: 0
   m_Name: Square (5)
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1188,9 +1216,10 @@ GameObject:
   - component: {fileID: 904943178}
   - component: {fileID: 904943180}
   - component: {fileID: 904943179}
+  - component: {fileID: 904943181}
   m_Layer: 0
-  m_Name: Square (6)
-  m_TagString: Untagged
+  m_Name: Event1
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1315,6 +1344,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &904943181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904943177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3bb18241fed534299eae04ba07e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactuable
+  activated: 1
 --- !u!1 &1058442052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1370,7 @@ GameObject:
   - component: {fileID: 1058442054}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1500,7 +1542,7 @@ GameObject:
   - component: {fileID: 1130514203}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1636,9 +1678,10 @@ GameObject:
   - component: {fileID: 1191262807}
   - component: {fileID: 1191262809}
   - component: {fileID: 1191262808}
+  - component: {fileID: 1191262810}
   m_Layer: 0
-  m_Name: Square (5)
-  m_TagString: Untagged
+  m_Name: Event6
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1763,6 +1806,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1191262810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191262806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3bb18241fed534299eae04ba07e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactuable
+  activated: 0
 --- !u!1 &1329283136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,7 +1834,7 @@ GameObject:
   - component: {fileID: 1329283137}
   m_Layer: 0
   m_Name: Personaje
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1795,7 +1851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd9397f6d0608747951362c002136d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 0
+  speed: 1.85
 --- !u!61 &1329283138
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1867,8 +1923,8 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 0
-  m_CollisionDetection: 1
-  m_Constraints: 0
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!212 &1329283140
 SpriteRenderer:
   serializedVersion: 2
@@ -1954,9 +2010,10 @@ GameObject:
   - component: {fileID: 1378700215}
   - component: {fileID: 1378700217}
   - component: {fileID: 1378700216}
+  - component: {fileID: 1378700218}
   m_Layer: 0
-  m_Name: Square (4)
-  m_TagString: Untagged
+  m_Name: Event5
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2081,6 +2138,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1378700218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378700214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3bb18241fed534299eae04ba07e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactuable
+  activated: 0
 --- !u!1 &1420461989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,9 +2162,10 @@ GameObject:
   - component: {fileID: 1420461990}
   - component: {fileID: 1420461992}
   - component: {fileID: 1420461991}
+  - component: {fileID: 1420461993}
   m_Layer: 0
-  m_Name: Square (2)
-  m_TagString: Untagged
+  m_Name: Event3
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2219,6 +2290,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1420461993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420461989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3bb18241fed534299eae04ba07e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactuable
+  activated: 0
 --- !u!1 &1621765423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,9 +2352,10 @@ GameObject:
   - component: {fileID: 1675614090}
   - component: {fileID: 1675614092}
   - component: {fileID: 1675614091}
+  - component: {fileID: 1675614093}
   m_Layer: 0
-  m_Name: Square (3)
-  m_TagString: Untagged
+  m_Name: Event4
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2395,6 +2480,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1675614093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675614089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3bb18241fed534299eae04ba07e809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactuable
+  activated: 0
 --- !u!1 &1903472543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,7 +2544,7 @@ GameObject:
   - component: {fileID: 1905226947}
   m_Layer: 0
   m_Name: Square (4)
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2584,7 +2682,7 @@ GameObject:
   - component: {fileID: 1960371376}
   m_Layer: 0
   m_Name: Square (6)
-  m_TagString: Untagged
+  m_TagString: Muros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
