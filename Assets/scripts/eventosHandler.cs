@@ -25,6 +25,7 @@ public class eventosHandler : MonoBehaviour
     {
         if (!enEvento)
         {
+            Debug.Log("Tiempo: " + elapsedTime);
             elapsedTime += Time.deltaTime;
             if (elapsedTime >= tiempoEntreEventos)
             {
@@ -60,7 +61,15 @@ public class eventosHandler : MonoBehaviour
                 completado = true;
                 //recompensa = 20f;
             }
-
+            if (completado)
+            {
+                barraPep.Progreso(recompensa);
+                tiempoEnEvento = 0f;
+                elapsedTime = 0f;
+                enEvento = false;
+                player.eventoActivo = enEvento;
+                listaDeEventos[randomEvent].GetComponent<Interactuable>().activated = false;//devuelve el sprite del box colider
+            }
             yield return null;
         }
         Debug.LogWarning($"Evento finalizado en eventoHandler: {randomEvent}");
@@ -76,13 +85,8 @@ public class eventosHandler : MonoBehaviour
         {
             recompensa = 0f;
         }
-
-        barraPep.Progreso(recompensa);
-        tiempoEnEvento = 0f;
-        elapsedTime = 0f;
-        enEvento = false;
-        player.eventoActivo = enEvento;
-        listaDeEventos[randomEvent].GetComponent<Interactuable>().activated = false;//devuelve el sprite del box colider
+        
+        
 
 
     }

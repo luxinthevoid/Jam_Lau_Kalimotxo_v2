@@ -70,8 +70,8 @@ public class Player : MonoBehaviour
             if (script != null)
             {
                 //Debug.Log("Terminamos minijuego - Movimiento restaurado");
-                eventosHand.finEvento = true;
-                eventosHand.enMinijuego = false;
+                //eventosHand.finEvento = true;
+                //eventosHand.enMinijuego = false;
                 if (eventosHand.finEvento == true &&
                 eventosHand.enMinijuego == false)
                 {
