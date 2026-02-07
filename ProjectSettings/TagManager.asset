@@ -8,6 +8,8 @@ TagManager:
   - Interactuable
   - BotePepi
   - Eventos
+  - mancha
+  - fregona
   layers:
   - Default
   - TransparentFX
