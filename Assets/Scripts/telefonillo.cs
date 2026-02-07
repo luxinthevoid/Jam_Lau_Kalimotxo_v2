@@ -2,19 +2,16 @@ using UnityEngine;
 
 public class telefonillop : MonoBehaviour
 {
-    
+    [SerializeField] bool finEvento = false;
+    [SerializeField] botonAbrir abrir;
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(0))
+        if (abrir.colgar)
         {
-            Debug.Log("telefono");
+            finEvento = true;
+            Debug.Log("fin de evento interfono");
         }
     }
 }

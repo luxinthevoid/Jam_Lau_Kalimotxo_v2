@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Muros
   - Interactuable
+  - mancha
+  - fregona
   layers:
   - Default
   - TransparentFX
