@@ -10,9 +10,14 @@ public class ActivarEvento : MonoBehaviour
     private bool pendingEvent = false;
     private bool ejecutandoFogones = false;
     private bool ejecutandoFregona = false;
+    private bool ejecutandoRiel = false;
+    private bool ejecutandoTelefonillo = false;
     private bool eventoCompletado = false;
     [SerializeField] private GameObject fregonaPlacehorlder;
+    [SerializeField] private GameObject rielPlacehorlder;
     [SerializeField] private eventoFregona fregonaEvento;
+    [SerializeField] private eventoRiel eventoRiel;
+    [SerializeField] private telefonillop telefonillop;
     [SerializeField] private fregona freg;
     //[SerializeField] private GameObject fregonaEventoobjeto;
     [SerializeField] List<fogones> listaFogones = new List<fogones>();
@@ -56,7 +61,7 @@ public class ActivarEvento : MonoBehaviour
             }
             listaMarcos[eventNum].SetActive(false);
         }
-        if(ejecutandoFregona && fregonaEvento.completado)
+        if (ejecutandoFregona && fregonaEvento.completado)
         {
 
             ejecutandoFregona = false;
@@ -66,6 +71,21 @@ public class ActivarEvento : MonoBehaviour
             freg.gameObject.SetActive(false);
 
         }
+        if (ejecutandoTelefonillo && telefonillop.completado)
+        {
+            ejecutandoTelefonillo = false;
+            eventoCompletado = true;
+            telefonillop.gameObject.SetActive(false);
+            listaMarcos[eventNum].SetActive(false);
+        }
+        if (ejecutandoRiel && eventoRiel.completado)
+        {
+            ejecutandoRiel= false;
+            eventoCompletado = true;
+            eventoRiel.gameObject.SetActive(false);
+            rielPlacehorlder.SetActive(true);
+        }
+
 
         //cualquier evento completado
         if (eventoCompletado)
@@ -96,17 +116,26 @@ public class ActivarEvento : MonoBehaviour
             case 1:
                 //fregona
                 Debug.Log("Ejecutando evento 1: fregona");
-                ejecutandoFregona=true;
+                ejecutandoFregona = true;
                 fregonaPlacehorlder.SetActive(false);
                 fregonaEvento.gameObject.SetActive(true);
                 freg.gameObject.SetActive(true);
-
+                break;
+            case 2:
+                Debug.Log("Ejecutando evento 2: telefonillo");
+                ejecutandoTelefonillo = true;
+                telefonillop.gameObject.SetActive(true);
+                listaMarcos[eventNum].SetActive(true);
+                break;
+            case 3:
+                Debug.Log("Ejecutando evento 3: Riel");
+                ejecutandoRiel = true;
+                eventoRiel.gameObject.SetActive(true);
+                rielPlacehorlder.SetActive(false);
 
 
                 break;
-            //case 2:
-            //    Debug.Log("Ejecutando evento 2");
-            //    break;
+
             default:
                 Debug.Log("Ejecutando evento default: Fogones");
 

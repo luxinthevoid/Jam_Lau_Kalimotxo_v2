@@ -29,7 +29,6 @@ public class eventoRiel : MonoBehaviour
         {
             pRotacion.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             Debug.Log("Evento completado");
-            cajaRiel.enabled = false;
             completado = true;
         }
     }
