@@ -92,6 +92,7 @@ public class ActivarEvento : MonoBehaviour
         {
             ejecutandoTelefono = false;
             eventoCompletado = true;
+            listaMarcos[eventNum].SetActive(false);
             eventoTelefono.gameObject.SetActive(false);
             telefonoPlacehorlder.SetActive(true);
         }
@@ -148,6 +149,7 @@ public class ActivarEvento : MonoBehaviour
                 ejecutandoTelefono = true;
                 eventoTelefono.gameObject.SetActive(true);
                 telefonoPlacehorlder.SetActive(false);
+                listaMarcos[eventNum].SetActive(true);
 
                 break;
             default:
