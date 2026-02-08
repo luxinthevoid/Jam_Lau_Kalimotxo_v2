@@ -5468,7 +5468,6 @@ MonoBehaviour:
   malo: {fileID: 1969743467}
   txt1: {fileID: 549725239}
   txt2: {fileID: 50638021}
-  canvas: {fileID: 411337934}
   responder: 0
   colgar: 0
   iteracion: 0
@@ -5507,7 +5506,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.039443314, y: 0}
+  m_Offset: {x: 4.4407134, y: -0.4217164}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5517,7 +5516,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.863916, y: 2.53}
+  m_Size: {x: 0.51964283, y: 1.1434327}
   m_EdgeRadius: 0
 --- !u!1 &1378700214
 GameObject:
@@ -5698,7 +5697,7 @@ Transform:
   m_GameObject: {fileID: 1412268101}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.2514212, w: -0.96787775}
-  m_LocalPosition: {x: -0.019, y: -0.021000002, z: -1}
+  m_LocalPosition: {x: 0.025, y: -0.002, z: 0}
   m_LocalScale: {x: 0.2622, y: 0.6915, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5751,7 +5750,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.19999993, g: 0.5579622, b: 1, a: 1}
