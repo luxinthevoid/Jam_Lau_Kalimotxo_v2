@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 411337933}
   - component: {fileID: 411337932}
   m_Layer: 5
-  m_Name: TriggerTelefonillo
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1506,15 +1506,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1068903386}
+    m_TransformParent: {fileID: 2131694641}
     m_Modifications:
     - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.57
+      value: 4.4900002
       objectReference: {fileID: 0}
     - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13
+      value: -2.5900002
       objectReference: {fileID: 0}
     - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1526,11 +1526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1555,6 +1555,10 @@ PrefabInstance:
     - target: {fileID: 1571443266164670798, guid: 112b8efe858255649a2159708657ce2c, type: 3}
       propertyPath: m_Layer
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571443266164670798, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3693823963468912837, guid: 112b8efe858255649a2159708657ce2c, type: 3}
       propertyPath: m_SortingOrder
@@ -1612,6 +1616,7 @@ MonoBehaviour:
   player: {fileID: 1329283137}
   fregonaPlacehorlder: {fileID: 1934005710}
   fregonaEvento: {fileID: 1068903387}
+  freg: {fileID: 1793906297}
   listaFogones:
   - {fileID: 508050191}
   - {fileID: 868058738}
@@ -2264,6 +2269,7 @@ MonoBehaviour:
   barra: {fileID: 772950365}
   valorClick: 1
   valorPerdida: -1
+  valorActual: 0
   esClickable: 0
 --- !u!114 &772950365
 MonoBehaviour:
@@ -2835,7 +2841,7 @@ MonoBehaviour:
   barraPep: {fileID: 772950364}
   actEv: {fileID: 522115501}
   player: {fileID: 1329283137}
-  tiempoEntreEventos: 8
+  tiempoEntreEventos: 3
   elapsedTime: 0
   finDeEventoTiempo: 16
   tiempoEnEvento: 0
@@ -3074,8 +3080,7 @@ Transform:
   m_LocalPosition: {x: 11.06, y: -2.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1793906296}
+  m_Children: []
   m_Father: {fileID: 2131694641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1068903387
@@ -6503,6 +6508,7 @@ Transform:
   m_Children:
   - {fileID: 1068903386}
   - {fileID: 904943178}
+  - {fileID: 1793906296}
   m_Father: {fileID: 522115502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807

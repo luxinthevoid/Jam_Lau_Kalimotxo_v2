@@ -13,6 +13,7 @@ public class ActivarEvento : MonoBehaviour
     private bool eventoCompletado = false;
     [SerializeField] private GameObject fregonaPlacehorlder;
     [SerializeField] private eventoFregona fregonaEvento;
+    [SerializeField] private fregona freg;
     //[SerializeField] private GameObject fregonaEventoobjeto;
     [SerializeField] List<fogones> listaFogones = new List<fogones>();
     //[SerializeField] List<GameObject> objetosFogones = new List<GameObject>();
@@ -62,6 +63,8 @@ public class ActivarEvento : MonoBehaviour
             eventoCompletado = true;
             fregonaPlacehorlder.SetActive(true);
             fregonaEvento.gameObject.SetActive(false);
+            freg.gameObject.SetActive(false);
+
         }
 
         //cualquier evento completado
@@ -96,6 +99,7 @@ public class ActivarEvento : MonoBehaviour
                 ejecutandoFregona=true;
                 fregonaPlacehorlder.SetActive(false);
                 fregonaEvento.gameObject.SetActive(true);
+                freg.gameObject.SetActive(true);
 
 
 

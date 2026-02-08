@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class fregona : MonoBehaviour
 {
-    [SerializeField] int limpias = 0;
+    [SerializeField]public int limpias = 0;
     
     public bool limpio = false;
-
+    void OnEnable()
+    {
+        limpias=0;
+        limpio = false;
+    }
     void Update()
     {
         if (Input.GetMouseButton(0))

@@ -4,15 +4,16 @@ public class eventoFregona : MonoBehaviour
 {
     [SerializeField] GameObject mancha;
     [SerializeField] fregona freg;
-    public bool completado = false;
 
-    float timer;
-    int cont;
-    
+    public bool completado = false;
+    float timer = 0;
+    int cont = 3;
+
     void OnEnable()
     {
         cont = 3;
         completado = false;
+        timer = 0;
     }
 
     // Update is called once per frame
@@ -23,6 +24,8 @@ public class eventoFregona : MonoBehaviour
         {
             if (timer > 1f)
             {
+                Debug.Log("Contador de manchas: " + cont);
+
                 CrearMancha();
                 timer = 0f;
                 cont--;
@@ -36,7 +39,7 @@ public class eventoFregona : MonoBehaviour
             completado = true;
         }
     }
-               
+
     void CrearMancha()
     {
         // Desplazamientos aleatorios alrededor del transform
