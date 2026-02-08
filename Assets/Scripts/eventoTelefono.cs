@@ -20,7 +20,7 @@ public class eventoTelefono : MonoBehaviour
 
     public bool completado = false;
 
-    List<string> txt2Lista = new List<string>() { "malo1", "malo2", "malo3", "malo4" };
+    List<string> txt2Lista = new List<string>() { "Estoy bien", "Ya he comido", "No, no tengo anemia", "MaÃ±ana llueve" };
 
     void OnEnable()
     {
@@ -32,7 +32,7 @@ public class eventoTelefono : MonoBehaviour
         bueno.onClick.AddListener(Colgar);
         malo.onClick.AddListener(BucleTxt);
         completado = false;
-        txt1.text = "Luego te llamo mamá";
+        txt1.text = "Luego te llamo mamï¿½";
         txt2.text = txt2Lista[iteracion];
     }
 
@@ -86,7 +86,7 @@ public class eventoTelefono : MonoBehaviour
 
     void BucleTxt()
     {
-        txt1.text = "Luego te llamo mamá";
+        txt1.text = "Luego te llamo mamï¿½";
         txt2.text = txt2Lista[iteracion];
         if(iteracion >= txt2Lista.Count - 1)
             iteracion=0;
