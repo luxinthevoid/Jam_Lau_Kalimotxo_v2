@@ -2440,6 +2440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interfono
   cajaBoton: {fileID: 2002773294}
+  altavoz: {fileID: 646160374}
 --- !u!61 &646160377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5103,6 +5104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::eventoTelefono
   cajaTelefono: {fileID: 1358602176}
+  telefono: {fileID: 1412268101}
   bueno: {fileID: 947365951}
   malo: {fileID: 1969743467}
   txt1: {fileID: 549725239}

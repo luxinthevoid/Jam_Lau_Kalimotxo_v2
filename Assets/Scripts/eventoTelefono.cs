@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class eventoTelefono : MonoBehaviour
 {
     [SerializeField] BoxCollider2D cajaTelefono;
+    [SerializeField] GameObject telefono;
     [SerializeField] Button bueno;
     [SerializeField] Button malo;
     [SerializeField] TextMeshProUGUI txt1;
@@ -14,6 +15,8 @@ public class eventoTelefono : MonoBehaviour
     [SerializeField] bool responder;
     [SerializeField] bool colgar;
     [SerializeField] int iteracion;
+
+    bool oscilar = false;
 
     public bool completado = false;
 
@@ -44,6 +47,19 @@ public class eventoTelefono : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!responder)
+        {
+            if(oscilar)
+            {
+                telefono.transform.Rotate(0f,0f,-7f);
+                oscilar = false;
+            }
+            else
+            {
+                telefono.transform.Rotate(0f, 0f, 7f);
+                oscilar = true;
+            }
+        }
         if (colgar)
         {
             Debug.Log("Evento completado");
