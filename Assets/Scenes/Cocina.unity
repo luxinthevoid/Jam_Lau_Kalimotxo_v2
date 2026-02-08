@@ -1115,6 +1115,7 @@ GameObject:
   - component: {fileID: 439866607}
   - component: {fileID: 439866606}
   - component: {fileID: 439866608}
+  - component: {fileID: 439866609}
   m_Layer: 14
   m_Name: TriggerFogones
   m_TagString: Interactuable
@@ -1175,7 +1176,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 1.32}
+    oldSize: {x: 0.81333333, y: 0.88}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1255,6 +1256,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactuable
   activated: 0
+--- !u!95 &439866609
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439866604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14a09dfb7f5c5dd4aa2a5188361ca661, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &455260414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,7 +1495,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: -947707935953700017, guid: 73d219d340eca794e9f4967136114e4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1840,7 +1863,7 @@ Transform:
   m_GameObject: {fileID: 522115500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.13, y: 1.91, z: 0}
+  m_LocalPosition: {x: -1.9200001, y: 1.5400001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2237,7 +2260,7 @@ Transform:
   m_GameObject: {fileID: 576834587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.72078, y: 0.02, z: 0}
+  m_LocalPosition: {x: -1.51078, y: -0.34999987, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2623,7 +2646,7 @@ Transform:
   m_GameObject: {fileID: 619736815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16269004, y: -0.94834, z: 0}
+  m_LocalPosition: {x: 0.37269008, y: -1.3183398, z: 0}
   m_LocalScale: {x: 22.291, y: 22.291, z: 22.291}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3273,6 +3296,7 @@ GameObject:
   - component: {fileID: 904943180}
   - component: {fileID: 904943179}
   - component: {fileID: 904943181}
+  - component: {fileID: 904943182}
   m_Layer: 14
   m_Name: Trigger Fregona
   m_TagString: Interactuable
@@ -3333,7 +3357,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 1.32}
+    oldSize: {x: 0.81333333, y: 0.88}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3413,6 +3437,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactuable
   activated: 0
+--- !u!95 &904943182
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904943177}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e81787565ac4c034d943ff6388866bbe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &947365949
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,6 +4971,7 @@ GameObject:
   - component: {fileID: 1191262809}
   - component: {fileID: 1191262808}
   - component: {fileID: 1191262810}
+  - component: {fileID: 1191262811}
   m_Layer: 14
   m_Name: TriggerMueble
   m_TagString: Interactuable
@@ -4941,7 +4988,7 @@ Transform:
   m_GameObject: {fileID: 1191262806}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5616999, y: 1.45, z: 0}
+  m_LocalPosition: {x: -1.5617, y: 1.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4985,7 +5032,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 1.32}
+    oldSize: {x: 0.81333333, y: 0.88}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5065,6 +5112,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactuable
   activated: 0
+--- !u!95 &1191262811
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191262806}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b497eb7d1aca00b47b385d2225991a59, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1198475502
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,7 +5634,7 @@ Transform:
   m_GameObject: {fileID: 1329283136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.39, y: -2.96, z: 0}
+  m_LocalPosition: {x: 4.6, y: -3.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5957,6 +6026,7 @@ GameObject:
   - component: {fileID: 1378700217}
   - component: {fileID: 1378700216}
   - component: {fileID: 1378700218}
+  - component: {fileID: 1378700219}
   m_Layer: 14
   m_Name: TriggerTelefono
   m_TagString: Interactuable
@@ -6017,7 +6087,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 1.32}
+    oldSize: {x: 0.81333333, y: 0.88}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6097,6 +6167,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactuable
   activated: 0
+--- !u!95 &1378700219
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378700214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1b12359e85116f4a99b739bf730c437, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1412268101
 GameObject:
   m_ObjectHideFlags: 0
@@ -7032,6 +7124,7 @@ GameObject:
   - component: {fileID: 1675614092}
   - component: {fileID: 1675614091}
   - component: {fileID: 1675614093}
+  - component: {fileID: 1675614094}
   m_Layer: 14
   m_Name: TriggerTelefonillo
   m_TagString: Interactuable
@@ -7048,7 +7141,7 @@ Transform:
   m_GameObject: {fileID: 1675614089}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.73, y: -0.07, z: 0}
+  m_LocalPosition: {x: 8.73, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7092,7 +7185,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 1.32}
+    oldSize: {x: 0.81333333, y: 0.88}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7172,6 +7265,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactuable
   activated: 0
+--- !u!95 &1675614094
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675614089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d6ebf371fe75b747a55162f38f3aa46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1701039424
 GameObject:
   m_ObjectHideFlags: 0
@@ -8779,7 +8894,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: -7033972426015446341, guid: 73d219d340eca794e9f4967136114e4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9294,7 +9409,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8612100262525076689, guid: 73d219d340eca794e9f4967136114e4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
