@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
         desactivar.SetActive(true);
         sr.enabled = true;
         eventosObj.SetActive(true);
+        eveMoneda.perder = false;
     }
     private void OnTriggerStay2D(Collider2D other)
     {
