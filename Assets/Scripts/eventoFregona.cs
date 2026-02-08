@@ -35,7 +35,7 @@ public class eventoFregona : MonoBehaviour
         if (freg.limpio)
         {
             Debug.Log("Evento completado");
-            this.enabled = false;
+            //this.enabled = false;
             completado = true;
         }
     }

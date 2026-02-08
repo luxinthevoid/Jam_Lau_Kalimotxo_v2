@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class fregona : MonoBehaviour
 {
-    [SerializeField]public int limpias = 0;
-    
+    [SerializeField] public int limpias = 0;
+
     public bool limpio = false;
     void OnEnable()
     {
-        limpias=0;
+        limpias = 0;
         limpio = false;
     }
     void Update()
@@ -19,7 +19,7 @@ public class fregona : MonoBehaviour
             transform.position = mousePosition;
         }
 
-        if(limpias >= 3)
+        if (limpias >= 3)
         {
             limpio = true;
             Debug.Log("todas limpias");
