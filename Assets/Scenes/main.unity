@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &227140671
 Transform:
   m_ObjectHideFlags: 0
@@ -714,6 +714,7 @@ MonoBehaviour:
   responder: 0
   colgar: 0
   iteracion: 0
+  completado: 0
 --- !u!61 &363292277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3430,6 +3431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::telefonillop
   finEvento: 0
   abrir: {fileID: 537071017}
+  completado: 0
 --- !u!212 &1913044964
 SpriteRenderer:
   serializedVersion: 2
@@ -3630,6 +3632,7 @@ MonoBehaviour:
   pRotacion: {fileID: 1850563910}
   rotacionActual: 0
   cajaRiel: {fileID: 2113512659}
+  completado: 0
 --- !u!61 &2113512659
 BoxCollider2D:
   m_ObjectHideFlags: 0

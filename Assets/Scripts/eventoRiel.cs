@@ -5,6 +5,8 @@ public class eventoRiel : MonoBehaviour
     [SerializeField] GameObject pRotacion;
     [SerializeField] float rotacionActual;
     [SerializeField] BoxCollider2D cajaRiel;
+
+    public bool completado = false;
     
     void Awake()
     {
@@ -18,6 +20,7 @@ public class eventoRiel : MonoBehaviour
         pRotacion.transform.rotation = Quaternion.Euler(0f, 0f, -30f);
         cajaRiel.transform.rotation = Quaternion.Euler(0f, 0f, -30f);
         rotacionActual = -30f;
+        completado = false;
     }
 
     void Update()
@@ -27,6 +30,7 @@ public class eventoRiel : MonoBehaviour
             pRotacion.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             Debug.Log("Evento completado");
             cajaRiel.enabled = false;
+            completado = true;
         }
     }
 

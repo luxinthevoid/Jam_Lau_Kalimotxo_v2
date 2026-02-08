@@ -16,6 +16,8 @@ public class eventoTelefono : MonoBehaviour
     [SerializeField] bool colgar;
     [SerializeField] int iteracion;
 
+    public bool completado = false;
+
     List<string> txt2Lista = new List<string>() { "malo1", "malo2", "malo3", "malo4" };
 
     void OnEnable()
@@ -26,6 +28,7 @@ public class eventoTelefono : MonoBehaviour
         malo.onClick.AddListener(BucleTxt);
         if (canvas != null)
             canvas.gameObject.SetActive(false);
+        completado = false;
     }
 
     void OnDisable()
@@ -40,7 +43,7 @@ public class eventoTelefono : MonoBehaviour
         if (colgar)
         {
             Debug.Log("Evento completado");
-            this.gameObject.SetActive(false);
+            completado = true;
         }
     }
 
