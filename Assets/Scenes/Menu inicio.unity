@@ -1150,6 +1150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2215f0335f43064680b31e87b6937d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::menuHandler
+  btnJugar: {fileID: 2113117359}
+  btnOpciones: {fileID: 1069355718}
+  btnSalir: {fileID: 467704147}
+  btnVolver: {fileID: 486756605}
+  instrucciones: {fileID: 1000704424}
 --- !u!4 &1585171804
 Transform:
   m_ObjectHideFlags: 0
@@ -1741,7 +1746,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1585171803}
         m_TargetAssemblyTypeName: menuHandler, Assembly-CSharp
         m_MethodName: clickJugar
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
