@@ -692,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &363292276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1426,6 +1426,7 @@ MonoBehaviour:
   barra: {fileID: 798739328}
   valorClick: 1
   valorPerdida: -1
+  valorActual: 0
   esClickable: 1
 --- !u!1 &908086651
 GameObject:
