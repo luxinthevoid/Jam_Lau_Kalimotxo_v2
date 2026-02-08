@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -10,9 +11,13 @@ public class Player : MonoBehaviour
     private Collider2D objetoActual;
     public bool eventoActivo = false;
     public bool puedesMoverte = true;
+    [SerializeField] GameObject desactivar;
+    [SerializeField] GameObject eventosObj;
+    [SerializeField] SpriteRenderer sr;
     [SerializeField] barraPepinillo barraPep;
     [SerializeField] eventosHandler eventosHand;
-    [SerializeField] Transform origen;
+    Transform origen;
+    [SerializeField] eventoFinalMoneda eveMoneda;
     // Nuevo: referencia al Rigidbody2D
     private Rigidbody2D rb;
 
@@ -44,6 +49,9 @@ public class Player : MonoBehaviour
         barraPep.completado = false;
         eventosHand.gameObject.SetActive(true);
         puedesMoverte = true;
+        desactivar.SetActive(true);
+        sr.enabled = true;
+        eventosObj.SetActive(true);
     }
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -116,13 +124,25 @@ public class Player : MonoBehaviour
             Debug.Log("¡Has ganado! Reiniciando el juego...");
             eventosHand.gameObject.SetActive(false);
             puedesMoverte = false;
+            desactivar.SetActive(false);
+            sr.enabled = false;
             barraPep.esClickable = false;
+            eventosObj.SetActive(false);
+
+            eveMoneda.gameObject.SetActive(true);
             //EventoMoneda
-            //if(eventoMoneda.win){
-            //loadScene("WinScene");
-            //}
-            //else{
-            reStart();
+            if (eveMoneda.ganar)
+            {
+                eveMoneda.gameObject.SetActive(false);
+                SceneManager.LoadScene("menufin");
+                //}
+
+            }
+            if (eveMoneda.perder)
+            {
+                eveMoneda.gameObject.SetActive(false);
+                reStart();
+            }
         }
 
     }

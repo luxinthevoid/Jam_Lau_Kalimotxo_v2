@@ -7,8 +7,8 @@ public class eventoFinalMoneda : MonoBehaviour
     [SerializeField] Button cruz;
     [SerializeField] GameObject monedaGiratoria;
     [SerializeField] int probGanar = 5;
-    [SerializeField] bool ganar = false;
-    [SerializeField] bool perder = false;
+    [SerializeField] public bool ganar = false;
+    [SerializeField] public bool perder = false;
     [SerializeField] bool animacion = false;
     [SerializeField] int resultado=-1;
     [SerializeField] string txt="";
@@ -32,7 +32,6 @@ public class eventoFinalMoneda : MonoBehaviour
             {
                 Debug.Log("Ha salido" + txt);
                 ganar = true;
-                this.gameObject.SetActive(false); //Quitar esto!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             }
             else
             {
