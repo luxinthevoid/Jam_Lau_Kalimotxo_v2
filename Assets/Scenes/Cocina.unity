@@ -2943,6 +2943,7 @@ MonoBehaviour:
   valorClick: 1
   valorPerdida: -1
   valorActual: 0
+  completado: 0
   esClickable: 0
 --- !u!114 &772950365
 MonoBehaviour:
@@ -5080,6 +5081,7 @@ MonoBehaviour:
   eventoActivo: 0
   barraPep: {fileID: 772950364}
   eventosHand: {fileID: 990054930}
+  origen: {fileID: 0}
 --- !u!50 &1329283139
 Rigidbody2D:
   serializedVersion: 5
