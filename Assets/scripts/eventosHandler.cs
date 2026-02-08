@@ -14,7 +14,7 @@ public class eventosHandler : MonoBehaviour
     [SerializeField] float tiempoEnEvento = 0f;
     [SerializeField] bool completado = false;
     [SerializeField] bool enEvento = false;
-    [SerializeField] public List<Interactuable> listaDeEventos = new List<Interactuable>();
+    [SerializeField] public List<Interactuable> listaDeInteractuables = new List<Interactuable>();
     [SerializeField] float recompensa;
     public bool finEvento = false;
     public bool enMinijuego = false;
@@ -41,7 +41,8 @@ public class eventosHandler : MonoBehaviour
                 barraPep.esClickable = false;
                 enEvento = true;
                 player.eventoActivo = enEvento;
-                int randomEvent = Random.Range(0, listaDeEventos.Count);
+                int randomEvent = Random.Range(0, listaDeInteractuables.Count);
+                listaDeInteractuables[randomEvent].GetComponent<Interactuable>().gameObject.SetActive(true);
                 StartCoroutine(startEvent(randomEvent));//cambiar por randomEvent cuando termine el testing
             }
         }
@@ -52,7 +53,7 @@ public class eventosHandler : MonoBehaviour
         //Debug.LogWarning($"Evento iniciado en eventoHandler: {randomEvent}");
         actEv.activarEvento(randomEvent);//llamar al script del evento para que se active el evento seleccionado
         //aviso visual
-        listaDeEventos[randomEvent].GetComponent<Interactuable>().activated = true;//cambia el sprite del box colider
+        listaDeInteractuables[randomEvent].GetComponent<Interactuable>().activated = true;//cambia el sprite del box colider
 
 
         //mientras que no este completado el evento, se va a quedar en este bucle, y se va a ir sumando el tiempo que el jugador tarda en completar el evento una vez el jugador llegue al minijuego
@@ -74,7 +75,7 @@ public class eventosHandler : MonoBehaviour
                 elapsedTime = 0f;
                 enEvento = false;
                 player.eventoActivo = enEvento;
-                listaDeEventos[randomEvent].GetComponent<Interactuable>().activated = false;//devuelve el sprite del box colider
+                listaDeInteractuables[randomEvent].GetComponent<Interactuable>().activated = false;//devuelve el sprite del box colider
             }
             yield return null;
         }

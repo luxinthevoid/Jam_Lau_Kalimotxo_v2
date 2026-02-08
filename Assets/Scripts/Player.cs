@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     void reStart()
     {
         Debug.Log("Reiniciando el juego... metodoreStart");
-        origen = this.transform;
+        rb.position = origen.position;
         barraPep.barra.value= 0;
         barraPep.completado = false;
         eventosHand.gameObject.SetActive(true);
