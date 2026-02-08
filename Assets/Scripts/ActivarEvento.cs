@@ -132,8 +132,9 @@ public class ActivarEvento : MonoBehaviour
                 ejecutandoRiel = true;
                 eventoRiel.gameObject.SetActive(true);
                 rielPlacehorlder.SetActive(false);
-
-
+                break;
+                case 4:
+                    Debug.Log("Ejecutando evento 4: Telefono");
                 break;
 
             default:
