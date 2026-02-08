@@ -692,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &363292276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3429,7 +3429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ffb5e163beb4743827c6de62e9c6f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::telefonillop
-  finEvento: 0
   abrir: {fileID: 537071017}
   completado: 0
 --- !u!212 &1913044964
@@ -3629,9 +3628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b605ff772ccba34abdd842b11c77ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::eventoRiel
-  pRotacion: {fileID: 1850563910}
   rotacionActual: 0
-  cajaRiel: {fileID: 2113512659}
   completado: 0
 --- !u!61 &2113512659
 BoxCollider2D:

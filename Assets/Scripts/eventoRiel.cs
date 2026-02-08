@@ -34,7 +34,7 @@ public class eventoRiel : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             rotacionActual += 5f;
-            this.transform.rotation = Quaternion.Euler(0f, 0f, -15f);
+            this.transform.rotation = Quaternion.Euler(0f, 0f, rotacionActual);
         }
     }
 }

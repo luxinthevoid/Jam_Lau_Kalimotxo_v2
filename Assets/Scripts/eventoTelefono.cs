@@ -30,6 +30,8 @@ public class eventoTelefono : MonoBehaviour
         if (canvas != null)
             canvas.gameObject.SetActive(false);
         completado = false;
+        txt1.text = "Luego te llamo mamá";
+        txt2.text = txt2Lista[iteracion];
     }
 
     void OnDisable()
