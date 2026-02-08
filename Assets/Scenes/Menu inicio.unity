@@ -382,7 +382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &467704146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -515,7 +515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &486756604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -868,7 +868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1000704423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1006,7 +1006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1069355717
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1150,6 +1150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2215f0335f43064680b31e87b6937d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::menuHandler
+  btnJugar: {fileID: 2113117359}
+  btnOpciones: {fileID: 1069355718}
+  btnSalir: {fileID: 467704147}
+  btnVolver: {fileID: 486756605}
+  instrucciones: {fileID: 1000704424}
 --- !u!4 &1585171804
 Transform:
   m_ObjectHideFlags: 0
@@ -1673,7 +1678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2113117358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1741,11 +1746,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1585171803}
         m_TargetAssemblyTypeName: menuHandler, Assembly-CSharp
         m_MethodName: clickJugar
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -10,11 +10,12 @@ public class eventoTelefono : MonoBehaviour
     [SerializeField] Button malo;
     [SerializeField] TextMeshProUGUI txt1;
     [SerializeField] TextMeshProUGUI txt2;
-    [SerializeField] Canvas canvas;
 
     [SerializeField] bool responder;
     [SerializeField] bool colgar;
     [SerializeField] int iteracion;
+
+    public bool completado = false;
 
     List<string> txt2Lista = new List<string>() { "malo1", "malo2", "malo3", "malo4" };
 
@@ -22,16 +23,22 @@ public class eventoTelefono : MonoBehaviour
     {
         iteracion = 0;
         responder = false;
+        colgar = false;
+        bueno.gameObject.SetActive(false);
+        malo.gameObject.SetActive(false);
         bueno.onClick.AddListener(Colgar);
         malo.onClick.AddListener(BucleTxt);
-        if (canvas != null)
-            canvas.gameObject.SetActive(false);
+        completado = false;
+        txt1.text = "Luego te llamo mamá";
+        txt2.text = txt2Lista[iteracion];
     }
 
     void OnDisable()
     {
         bueno.onClick.RemoveListener(Colgar);
         malo.onClick.RemoveListener(BucleTxt);
+        bueno.gameObject.SetActive(false);
+        malo.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,7 +47,7 @@ public class eventoTelefono : MonoBehaviour
         if (colgar)
         {
             Debug.Log("Evento completado");
-            this.gameObject.SetActive(false);
+            completado = true;
         }
     }
 
@@ -48,9 +55,9 @@ public class eventoTelefono : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !responder)
         {
-            cajaTelefono.enabled = false;
             responder = true;
-            canvas.gameObject.SetActive(true);
+            bueno.gameObject.SetActive(true);
+            malo.gameObject.SetActive(true);
             txt1.text = "'Colgar'";
             txt2.text = "'Responder'";
         }

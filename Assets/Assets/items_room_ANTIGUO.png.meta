@@ -1,49 +1,49 @@
 fileFormatVersion: 2
-guid: 73d219d340eca794e9f4967136114e4f
+guid: 4099b147d14d17e4180e6ff6009bf3e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3273215514226656321
-    second: items_room_0
+      213: -4725923578632116213
+    second: items_room_ANTIGUO_0
   - first:
-      213: 1066779739837131729
-    second: items_room_1
+      213: -4543494227194029621
+    second: items_room_ANTIGUO_1
   - first:
-      213: -590451386336761499
-    second: items_room_2
+      213: 6402670518835276120
+    second: items_room_ANTIGUO_2
   - first:
-      213: 7847382215822617183
-    second: items_room_3
+      213: 2092698241110856962
+    second: items_room_ANTIGUO_3
   - first:
-      213: 7390209704382926176
-    second: items_room_4
+      213: 5158024499168718600
+    second: items_room_ANTIGUO_4
   - first:
-      213: 2306790709779617147
-    second: items_room_5
+      213: -1054779914841365553
+    second: items_room_ANTIGUO_5
   - first:
-      213: -7157268510651410454
-    second: items_room_6
+      213: -1421158647781985982
+    second: items_room_ANTIGUO_6
   - first:
-      213: -9125437053466826953
-    second: items_room_7
+      213: 6058787028873497567
+    second: items_room_ANTIGUO_7
   - first:
-      213: 4256313146376356219
-    second: items_room_8
+      213: 6623105743276176218
+    second: items_room_ANTIGUO_8
   - first:
-      213: -7033972426015446341
-    second: items_room_9
+      213: 4683933613788179063
+    second: items_room_ANTIGUO_9
   - first:
-      213: -947707935953700017
-    second: items_room_10
+      213: 6543824349229752456
+    second: items_room_ANTIGUO_10
   - first:
-      213: -491339402380713490
-    second: items_room_11
+      213: -1239428676462601252
+    second: items_room_ANTIGUO_11
   - first:
-      213: 1823957464947604043
-    second: items_room_12
+      213: 5972386951508892620
+    second: items_room_ANTIGUO_12
   - first:
-      213: 8612100262525076689
-    second: items_room_13
+      213: -2609065839676502771
+    second: items_room_ANTIGUO_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -87,10 +87,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,326 +135,313 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: items_room_0
+      name: items_room_ANTIGUO_0
       rect:
         serializedVersion: 2
         x: 559
-        y: 1770
+        y: 1799
         width: 282
         height: 152
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbbf83105d33392d0800000000000000
-      internalID: -3273215514226656321
+      spriteID: b086df35b852a6eb0800000000000000
+      internalID: -4725923578632116213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_1
+      name: items_room_ANTIGUO_1
       rect:
         serializedVersion: 2
         x: 919
-        y: 1770
+        y: 1799
         width: 282
         height: 152
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1db63967586fdce00800000000000000
-      internalID: 1066779739837131729
+      spriteID: bc9df05a21442f0c0800000000000000
+      internalID: -4543494227194029621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_2
+      name: items_room_ANTIGUO_2
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 1770
+        x: 1279
+        y: 1799
         width: 292
         height: 102
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 569a24ca79b4ec7f0800000000000000
-      internalID: -590451386336761499
+      spriteID: 859ea010aeadad850800000000000000
+      internalID: 6402670518835276120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_3
+      name: items_room_ANTIGUO_3
       rect:
         serializedVersion: 2
         x: 1629
-        y: 1780
+        y: 1809
         width: 162
         height: 162
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5a23de4c8087ec60800000000000000
-      internalID: 7847382215822617183
+      spriteID: 2055f7376f1ca0d10800000000000000
+      internalID: 2092698241110856962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_4
+      name: items_room_ANTIGUO_4
       rect:
         serializedVersion: 2
         x: 569
-        y: 1220
+        y: 1249
         width: 272
         height: 462
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06d8365329c4f8660800000000000000
-      internalID: 7390209704382926176
+      spriteID: 80fa6bf14fbf49740800000000000000
+      internalID: 5158024499168718600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_5
+      name: items_room_ANTIGUO_5
       rect:
         serializedVersion: 2
         x: 879
-        y: 1540
+        y: 1569
         width: 352
         height: 212
-      alignment: 9
-      pivot: {x: 0.10183369, y: 0.87130624}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b75d59bbded530020800000000000000
-      internalID: 2306790709779617147
+      spriteID: fc3e9a3814bac51f0800000000000000
+      internalID: -1054779914841365553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_6
+      name: items_room_ANTIGUO_6
       rect:
         serializedVersion: 2
         x: 859
-        y: 760
+        y: 789
         width: 962
         height: 722
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae7988cd5364cac90800000000000000
-      internalID: -7157268510651410454
+      spriteID: 241fa7d4db7074ce0800000000000000
+      internalID: -1421158647781985982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_7
+      name: items_room_ANTIGUO_7
       rect:
         serializedVersion: 2
         x: 2449
-        y: 1110
+        y: 1139
         width: 162
         height: 162
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7372ce7395feb5180800000000000000
-      internalID: -9125437053466826953
+      spriteID: fdbcfb1b3b2251450800000000000000
+      internalID: 6058787028873497567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_8
+      name: items_room_ANTIGUO_8
       rect:
         serializedVersion: 2
         x: 2659
-        y: 1240
+        y: 1269
         width: 162
         height: 162
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7186967146711b30800000000000000
-      internalID: 4256313146376356219
+      spriteID: a5373d1359ff9eb50800000000000000
+      internalID: 6623105743276176218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_9
+      name: items_room_ANTIGUO_9
       rect:
         serializedVersion: 2
         x: 579
-        y: 440
+        y: 469
         width: 402
         height: 342
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbae47b985f426e90800000000000000
-      internalID: -7033972426015446341
+      spriteID: 77a2b512ecca00140800000000000000
+      internalID: 4683933613788179063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_10
+      name: items_room_ANTIGUO_10
       rect:
         serializedVersion: 2
         x: 989
-        y: 520
+        y: 549
         width: 142
         height: 262
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4b39a647a019d2f0800000000000000
-      internalID: -947707935953700017
+      spriteID: 8802460339550da50800000000000000
+      internalID: 6543824349229752456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_11
+      name: items_room_ANTIGUO_11
       rect:
         serializedVersion: 2
         x: 1989
-        y: 760
+        y: 789
         width: 112
         height: 392
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee1e1f0ba696e29f0800000000000000
-      internalID: -491339402380713490
+      spriteID: cdb930f7f2aaccee0800000000000000
+      internalID: -1239428676462601252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_12
+      name: items_room_ANTIGUO_12
       rect:
         serializedVersion: 2
         x: 2499
-        y: 750
+        y: 779
         width: 322
         height: 262
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4abf9f86afff4910800000000000000
-      internalID: 1823957464947604043
+      spriteID: ccb9dd11a4e22e250800000000000000
+      internalID: 5972386951508892620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: items_room_13
+      name: items_room_ANTIGUO_13
       rect:
         serializedVersion: 2
         x: 2979
-        y: 740
+        y: 769
         width: 272
         height: 482
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d40bd55f83548770800000000000000
-      internalID: 8612100262525076689
+      spriteID: d0dc976317cbacbd0800000000000000
+      internalID: -2609065839676502771
       vertices: []
       indices: 
       edges: []
@@ -463,7 +450,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bc8906141e479de4c939f95a1dddefe4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -473,20 +460,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      items_room_0: -3273215514226656321
-      items_room_1: 1066779739837131729
-      items_room_10: -947707935953700017
-      items_room_11: -491339402380713490
-      items_room_12: 1823957464947604043
-      items_room_13: 8612100262525076689
-      items_room_2: -590451386336761499
-      items_room_3: 7847382215822617183
-      items_room_4: 7390209704382926176
-      items_room_5: 2306790709779617147
-      items_room_6: -7157268510651410454
-      items_room_7: -9125437053466826953
-      items_room_8: 4256313146376356219
-      items_room_9: -7033972426015446341
+      items_room_ANTIGUO_0: -4725923578632116213
+      items_room_ANTIGUO_1: -4543494227194029621
+      items_room_ANTIGUO_10: 6543824349229752456
+      items_room_ANTIGUO_11: -1239428676462601252
+      items_room_ANTIGUO_12: 5972386951508892620
+      items_room_ANTIGUO_13: -2609065839676502771
+      items_room_ANTIGUO_2: 6402670518835276120
+      items_room_ANTIGUO_3: 2092698241110856962
+      items_room_ANTIGUO_4: 5158024499168718600
+      items_room_ANTIGUO_5: -1054779914841365553
+      items_room_ANTIGUO_6: -1421158647781985982
+      items_room_ANTIGUO_7: 6058787028873497567
+      items_room_ANTIGUO_8: 6623105743276176218
+      items_room_ANTIGUO_9: 4683933613788179063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
