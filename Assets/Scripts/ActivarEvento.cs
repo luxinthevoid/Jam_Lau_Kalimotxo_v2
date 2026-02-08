@@ -12,8 +12,11 @@ public class ActivarEvento : MonoBehaviour
     private bool ejecutandoFregona = false;
     private bool ejecutandoRiel = false;
     private bool ejecutandoTelefonillo = false;
+    private bool ejecutandoTelefono = false;
     private bool eventoCompletado = false;
     [SerializeField] private GameObject fregonaPlacehorlder;
+    [SerializeField] private GameObject telefonoPlacehorlder;
+    [SerializeField] private eventoTelefono eventoTelefono;
     [SerializeField] private GameObject rielPlacehorlder;
     [SerializeField] private eventoFregona fregonaEvento;
     [SerializeField] private eventoRiel eventoRiel;
@@ -85,6 +88,13 @@ public class ActivarEvento : MonoBehaviour
             eventoRiel.gameObject.SetActive(false);
             rielPlacehorlder.SetActive(true);
         }
+        if (ejecutandoTelefono && eventoTelefono.completado)
+        {
+            ejecutandoTelefono = false;
+            eventoCompletado = true;
+            eventoTelefono.gameObject.SetActive(false);
+            telefonoPlacehorlder.SetActive(true);
+        }
 
 
         //cualquier evento completado
@@ -133,19 +143,15 @@ public class ActivarEvento : MonoBehaviour
                 eventoRiel.gameObject.SetActive(true);
                 rielPlacehorlder.SetActive(false);
                 break;
-                case 4:
-                    Debug.Log("Ejecutando evento 4: Telefono");
+            case 4:
+                Debug.Log("Ejecutando evento 4: Telefono");
+                ejecutandoTelefono = true;
+                eventoTelefono.gameObject.SetActive(true);
+                telefonoPlacehorlder.SetActive(false);
+
                 break;
-
             default:
-                Debug.Log("Ejecutando evento default: Fogones");
-
-                for (int i = 0; i < listaFogones.Count; i++)
-                {
-                    listaFogones[i].gameObject.SetActive(true);
-                }
-                listaMarcos[eventNum].SetActive(true);
-                ejecutandoFogones = true;
+                Debug.LogError("Ejecutando evento fuera del index");
                 break;
         }
 

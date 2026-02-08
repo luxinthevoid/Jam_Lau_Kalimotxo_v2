@@ -24,6 +24,7 @@ public class eventoTelefono : MonoBehaviour
     {
         iteracion = 0;
         responder = false;
+        colgar = false;
         bueno.onClick.AddListener(Colgar);
         malo.onClick.AddListener(BucleTxt);
         if (canvas != null)
@@ -51,7 +52,6 @@ public class eventoTelefono : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !responder)
         {
-            cajaTelefono.enabled = false;
             responder = true;
             canvas.gameObject.SetActive(true);
             txt1.text = "'Colgar'";
