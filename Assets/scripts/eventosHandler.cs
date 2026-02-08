@@ -81,7 +81,7 @@ public class eventosHandler : MonoBehaviour
             }
             yield return null;
         }
-        Debug.LogWarning($"Evento finalizado en eventoHandler: {randomEvent}");
+        //Debug.LogWarning($"Evento finalizado en eventoHandler: {randomEvent}");
 
         if (tiempoEnEvento > finDeEventoTiempo)
         {

@@ -37,7 +37,7 @@ public class Interfono : MonoBehaviour
         {
             cajaBoton.enabled = true;
             responder = true;
-            Debug.Log("Responder");
+            //Debug.Log("Responder");
         }
     }
 }

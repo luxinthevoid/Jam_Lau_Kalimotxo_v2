@@ -24,7 +24,7 @@ public class eventoRiel : MonoBehaviour
         if (rotacionActual >= 0f)
         {
             this.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            Debug.Log("Evento completado");
+            //Debug.Log("Evento completado");
             completado = true;
         }
     }

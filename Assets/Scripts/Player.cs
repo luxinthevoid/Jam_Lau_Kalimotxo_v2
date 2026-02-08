@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private Camera cam;
     private Collider2D objetoActual;
     public bool eventoActivo = false;
-    bool puedesMoverte = true;
+    public bool puedesMoverte = true;
     [SerializeField] barraPepinillo barraPep;
     [SerializeField] eventosHandler eventosHand;
     [SerializeField] Transform origen;
@@ -87,7 +87,12 @@ public class Player : MonoBehaviour
                     if (eventosHand.finEvento == true &&
                     eventosHand.enMinijuego == false)
                     {
+                        Debug.Log("¡Minijuego completado! Puedes moverte de nuevo.");
                         puedesMoverte = true;
+                    }
+                    else
+                    {
+                        Debug.Log("no te deja moverte");
                     }
                 }
 

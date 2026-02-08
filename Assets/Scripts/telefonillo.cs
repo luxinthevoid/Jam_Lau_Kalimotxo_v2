@@ -16,7 +16,7 @@ public class telefonillop : MonoBehaviour
     {
         if (abrir.colgar)
         {
-            Debug.Log("fin de evento interfono");
+            //Debug.Log("fin de evento interfono");
             completado = true;
         }
     }

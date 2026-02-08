@@ -62,7 +62,7 @@ public class eventoTelefono : MonoBehaviour
         }
         if (colgar)
         {
-            Debug.Log("Evento completado");
+            //Debug.Log("Evento completado");
             completado = true;
         }
     }

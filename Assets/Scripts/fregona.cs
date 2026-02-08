@@ -22,17 +22,17 @@ public class fregona : MonoBehaviour
         if (limpias >= 3)
         {
             limpio = true;
-            Debug.Log("todas limpias");
+            //Debug.Log("todas limpias");
         }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("colision");
+        //Debug.Log("colision");
         if (collider.CompareTag("mancha"))
         {
             Destroy(collider.gameObject);
-            Debug.Log("Mancha limpiada");
+            //Debug.Log("Mancha limpiada");
             limpias++;
         }
     }

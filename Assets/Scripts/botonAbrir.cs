@@ -17,7 +17,7 @@ public class botonAbrir : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) { 
             colgar = true;
             botonColor.GetComponent<SpriteRenderer>().color = Color.red;
-            Debug.Log("Botón presionado");
+            //Debug.Log("Botón presionado");
         }
     }
 }

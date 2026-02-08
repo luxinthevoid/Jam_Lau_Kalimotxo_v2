@@ -54,7 +54,7 @@ public class ActivarEvento : MonoBehaviour
         //Todos los fogones completados
         if (ejecutandoFogones && listaFogones[0].completado && listaFogones[1].completado && listaFogones[2].completado)
         {
-            Debug.LogWarning($"Se completan fogones");
+            //Debug.LogWarning($"Se completan fogones");
 
             ejecutandoFogones = false;
             eventoCompletado = true;
@@ -101,17 +101,18 @@ public class ActivarEvento : MonoBehaviour
         //cualquier evento completado
         if (eventoCompletado)
         {
-            Debug.LogWarning($"Se restaura timer minijuego y mov jugador");
+            //Debug.LogWarning($"Se restaura timer minijuego y mov jugador");
 
             eventoCompletado = false;
             eventosHand.finEvento = true;
             eventosHand.enMinijuego = false;
+            player.puedesMoverte = true;
         }
     }
 
     private void EjecutarEvento()
     {
-        Debug.LogWarning($"EjecutaEvento: {eventNum}");
+        //Debug.LogWarning($"EjecutaEvento: {eventNum}");
         switch (eventNum)
         {
             case 0:
