@@ -156,7 +156,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 559
-        y: 1799
+        y: 1770
         width: 282
         height: 152
       alignment: 0
@@ -178,7 +178,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 919
-        y: 1799
+        y: 1770
         width: 282
         height: 152
       alignment: 0
@@ -199,8 +199,8 @@ TextureImporter:
       name: items_room_2
       rect:
         serializedVersion: 2
-        x: 1279
-        y: 1799
+        x: 1280
+        y: 1770
         width: 292
         height: 102
       alignment: 0
@@ -222,7 +222,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1629
-        y: 1809
+        y: 1780
         width: 162
         height: 162
       alignment: 0
@@ -244,7 +244,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 569
-        y: 1249
+        y: 1220
         width: 272
         height: 462
       alignment: 0
@@ -266,7 +266,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 879
-        y: 1569
+        y: 1540
         width: 352
         height: 212
       alignment: 9
@@ -288,7 +288,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 859
-        y: 789
+        y: 760
         width: 962
         height: 722
       alignment: 0
@@ -310,7 +310,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2449
-        y: 1139
+        y: 1110
         width: 162
         height: 162
       alignment: 0
@@ -332,7 +332,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2659
-        y: 1269
+        y: 1240
         width: 162
         height: 162
       alignment: 0
@@ -354,7 +354,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 579
-        y: 469
+        y: 440
         width: 402
         height: 342
       alignment: 0
@@ -376,7 +376,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 989
-        y: 549
+        y: 520
         width: 142
         height: 262
       alignment: 0
@@ -398,7 +398,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1989
-        y: 789
+        y: 760
         width: 112
         height: 392
       alignment: 0
@@ -420,7 +420,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2499
-        y: 779
+        y: 750
         width: 322
         height: 262
       alignment: 0
@@ -442,7 +442,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2979
-        y: 769
+        y: 740
         width: 272
         height: 482
       alignment: 0
