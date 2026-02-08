@@ -157,6 +157,7 @@ public class ActivarEvento : MonoBehaviour
                 break;
         }
 
+        eventosHand.listaDeInteractuables[eventNum].gameObject.SetActive(false);
         pendingEvent = false;
     }
 }
