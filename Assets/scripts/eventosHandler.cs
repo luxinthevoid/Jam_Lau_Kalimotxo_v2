@@ -18,8 +18,16 @@ public class eventosHandler : MonoBehaviour
     [SerializeField] float recompensa;
     public bool finEvento = false;
     public bool enMinijuego = false;
-    int cont = 0;
 
+    private void OnEnable()
+    {
+        elapsedTime = 0f;
+        tiempoEnEvento = 0f;
+        completado = false;
+        enEvento = false;
+        finEvento = false;
+        enMinijuego = false;
+    }
 
     void Update()
     {
@@ -35,8 +43,6 @@ public class eventosHandler : MonoBehaviour
                 player.eventoActivo = enEvento;
                 int randomEvent = Random.Range(0, listaDeEventos.Count);
                 StartCoroutine(startEvent(randomEvent));//cambiar por randomEvent cuando termine el testing
-                cont++;
-                Debug.LogWarning($"Se inicia evento corrutina num " + cont);
             }
         }
     }

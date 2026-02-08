@@ -12,13 +12,14 @@ public class Player : MonoBehaviour
     bool puedesMoverte = true;
     [SerializeField] barraPepinillo barraPep;
     [SerializeField] eventosHandler eventosHand;
-
+    [SerializeField] Transform origen;
     // Nuevo: referencia al Rigidbody2D
     private Rigidbody2D rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        origen = this.transform;
         Physics2D.IgnoreLayerCollision(3, 18, true);
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
@@ -35,7 +36,15 @@ public class Player : MonoBehaviour
     //        target = transform.position;
     //    }
     //}
-
+    void reStart()
+    {
+        Debug.Log("Reiniciando el juego... metodoreStart");
+        origen = this.transform;
+        barraPep.barra.value= 0;
+        barraPep.completado = false;
+        eventosHand.gameObject.SetActive(true);
+        puedesMoverte = true;
+    }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Interactuable"))
@@ -64,36 +73,53 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!puedesMoverte && objetoActual != null)
+        if (!barraPep.completado)
         {
-
-            Interactuable script = objetoActual.GetComponent<Interactuable>();
-            if (script != null)
+            if (!puedesMoverte && objetoActual != null)
             {
-                //Debug.Log("Terminamos minijuego - Movimiento restaurado");
-                //eventosHand.finEvento = true;
-                //eventosHand.enMinijuego = false;
-                if (eventosHand.finEvento == true &&
-                eventosHand.enMinijuego == false)
-                {
-                    puedesMoverte = true;
-                }
-            }
 
-            return; // Salimos del Update para que no se mueva mientras pulsa W
+                Interactuable script = objetoActual.GetComponent<Interactuable>();
+                if (script != null)
+                {
+                    //Debug.Log("Terminamos minijuego - Movimiento restaurado");
+                    //eventosHand.finEvento = true;
+                    //eventosHand.enMinijuego = false;
+                    if (eventosHand.finEvento == true &&
+                    eventosHand.enMinijuego == false)
+                    {
+                        puedesMoverte = true;
+                    }
+                }
+
+                return; // Salimos del Update para que no se mueva mientras pulsa W
+            }
+            if (Mouse.current.rightButton.wasPressedThisFrame && puedesMoverte)
+            {
+                Console.WriteLine("EventoRaton");
+                Vector2 pos = Mouse.current.position.ReadValue();
+                Vector3 worldPos = cam.ScreenToWorldPoint(pos);
+                target = worldPos;
+                Console.WriteLine("Posicion objetivo:" + target);
+            }
+            if (Mouse.current.leftButton.wasPressedThisFrame && objetoActual != null && eventoActivo)
+            {
+                ManageInteractuable();
+            }
         }
-        if (Mouse.current.rightButton.wasPressedThisFrame && puedesMoverte)
+        else
         {
-            Console.WriteLine("EventoRaton");
-            Vector2 pos = Mouse.current.position.ReadValue();
-            Vector3 worldPos = cam.ScreenToWorldPoint(pos);
-            target = worldPos;
-            Console.WriteLine("Posicion objetivo:" + target);
+            Debug.Log("¡Has ganado! Reiniciando el juego...");
+            eventosHand.gameObject.SetActive(false);
+            puedesMoverte = false;
+            barraPep.esClickable = false;
+            //EventoMoneda
+            //if(eventoMoneda.win){
+            //loadScene("WinScene");
+            //}
+            //else{
+            reStart();
         }
-        if (Mouse.current.leftButton.wasPressedThisFrame && objetoActual != null && eventoActivo)
-        {
-            ManageInteractuable();
-        }
+
     }
 
     void FixedUpdate()
