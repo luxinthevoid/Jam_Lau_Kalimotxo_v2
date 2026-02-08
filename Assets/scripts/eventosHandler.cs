@@ -25,7 +25,7 @@ public class eventosHandler : MonoBehaviour
     {
         if (!enEvento)
         {
-            Debug.Log("Tiempo: " + elapsedTime);
+            //Debug.Log("Tiempo: " + elapsedTime);
             elapsedTime += Time.deltaTime;
             if (elapsedTime >= tiempoEntreEventos)
             {

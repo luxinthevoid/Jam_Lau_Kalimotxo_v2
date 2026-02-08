@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(3, 18, true);
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
         target = rb.position;
@@ -116,7 +117,6 @@ public class Player : MonoBehaviour
             // Frenamos en seco usando la posición del rigidbody
             target = rb.position;
             //Debug.Log("Entramos minijuego - Pulsa W para salir");
-
         }
     }
 

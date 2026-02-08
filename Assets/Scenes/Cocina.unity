@@ -1500,6 +1500,78 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1
+--- !u!1001 &509458596
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1068903386}
+    m_Modifications:
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9945219
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.10452837
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571443266164670798, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_Name
+      value: fregona
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571443266164670798, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_Layer
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693823963468912837, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241693618966655153, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      propertyPath: m_Layer
+      value: 18
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1571443266164670798, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1793906297}
+  m_SourcePrefab: {fileID: 100100000, guid: 112b8efe858255649a2159708657ce2c, type: 3}
 --- !u!1 &522115500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1609,9 @@ MonoBehaviour:
   - {fileID: 1099449820}
   - {fileID: 1099449820}
   eventosHand: {fileID: 990054930}
-  player: {fileID: 0}
+  player: {fileID: 1329283137}
+  fregonaPlacehorlder: {fileID: 1934005710}
+  fregonaEvento: {fileID: 1068903387}
   listaFogones:
   - {fileID: 508050191}
   - {fileID: 868058738}
@@ -1556,6 +1630,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1942891679}
+  - {fileID: 2131694641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &576834587
@@ -2373,12 +2448,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904943177}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2, y: -1.76, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.512, y: -3.1810899, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1621765424}
+  m_Father: {fileID: 2131694641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &904943179
 BoxCollider2D:
@@ -2760,15 +2835,15 @@ MonoBehaviour:
   barraPep: {fileID: 772950364}
   actEv: {fileID: 522115501}
   player: {fileID: 1329283137}
-  tiempoEntreEventos: 5
+  tiempoEntreEventos: 8
   elapsedTime: 0
   finDeEventoTiempo: 16
   tiempoEnEvento: 0
   completado: 0
   enEvento: 0
   listaDeEventos:
-  - {fileID: 904943181}
   - {fileID: 439866608}
+  - {fileID: 904943181}
   - {fileID: 1191262810}
   - {fileID: 1675614093}
   - {fileID: 1378700218}
@@ -2970,6 +3045,54 @@ Transform:
   - {fileID: 1217497052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1068903385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068903386}
+  - component: {fileID: 1068903387}
+  m_Layer: 18
+  m_Name: eventoFregona
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1068903386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068903385}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.06, y: -2.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1793906296}
+  m_Father: {fileID: 2131694641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1068903387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068903385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906be40e2b43cf8428a4ed5b7099c3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::eventoFregona
+  mancha: {fileID: 6264784586281416954, guid: 3bab60b01c19ca14ab443f6aef49502c, type: 3}
+  freg: {fileID: 1793906297}
+  completado: 0
 --- !u!1 &1078842488
 GameObject:
   m_ObjectHideFlags: 0
@@ -4054,7 +4177,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 262144
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -4580,7 +4703,6 @@ Transform:
   - {fileID: 1675614090}
   - {fileID: 1378700215}
   - {fileID: 1191262807}
-  - {fileID: 904943178}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659760040
@@ -4955,6 +5077,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactuable
   activated: 0
   colorActivado: {r: 1, g: 0.7529413, b: 0.7960785, a: 1}
+--- !u!1 &1793906295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1571443266164670798, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+  m_PrefabInstance: {fileID: 509458596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1793906296 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 251410430343625812, guid: 112b8efe858255649a2159708657ce2c, type: 3}
+  m_PrefabInstance: {fileID: 509458596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1793906297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793906295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1371c18d95bbf044f9cc9d3936a43b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::fregona
+  limpias: 0
+  limpio: 0
 --- !u!1 &1794507458
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,6 +6472,39 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &2131694640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131694641}
+  m_Layer: 0
+  m_Name: Fregona
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2131694641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131694640}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1068903386}
+  - {fileID: 904943178}
+  m_Father: {fileID: 522115502}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

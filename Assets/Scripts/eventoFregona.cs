@@ -4,19 +4,20 @@ public class eventoFregona : MonoBehaviour
 {
     [SerializeField] GameObject mancha;
     [SerializeField] fregona freg;
+    public bool completado = false;
 
     float timer;
     int cont;
     
     void OnEnable()
     {
-        cont=3;
+        cont = 3;
+        completado = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         timer += Time.deltaTime;
         if (cont > 0)
         {
@@ -28,16 +29,25 @@ public class eventoFregona : MonoBehaviour
             }
         }
 
-        if(freg.limpio)
+        if (freg.limpio)
         {
             Debug.Log("Evento completado");
             this.enabled = false;
+            completado = true;
         }
     }
-           
-
+               
     void CrearMancha()
     {
-        Instantiate(mancha, new Vector3(Random.Range(-4f, 4f), Random.Range(-1, 1f),  0f), Quaternion.identity);
+        // Desplazamientos aleatorios alrededor del transform
+        float desplazamientoX = Random.Range(1.8f, 5.5f);
+        Debug.Log("Desplazamiento X para mancha: " + desplazamientoX);
+        float desplazamientoY = Random.Range(-3.7f, -1.9f);
+        Debug.Log("Desplazamiento Y para mancha: " + desplazamientoY);
+
+        Vector3 posicionFinal = new Vector3(desplazamientoX, desplazamientoY, 0f);
+        Debug.Log("Posición final para mancha: " + posicionFinal);
+
+        Instantiate(mancha, posicionFinal, Quaternion.identity);
     }
 }

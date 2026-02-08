@@ -9,7 +9,11 @@ public class ActivarEvento : MonoBehaviour
     private int eventNum = -1;
     private bool pendingEvent = false;
     private bool ejecutandoFogones = false;
+    private bool ejecutandoFregona = false;
     private bool eventoCompletado = false;
+    [SerializeField] private GameObject fregonaPlacehorlder;
+    [SerializeField] private eventoFregona fregonaEvento;
+    //[SerializeField] private GameObject fregonaEventoobjeto;
     [SerializeField] List<fogones> listaFogones = new List<fogones>();
     //[SerializeField] List<GameObject> objetosFogones = new List<GameObject>();
 
@@ -51,6 +55,14 @@ public class ActivarEvento : MonoBehaviour
             }
             listaMarcos[eventNum].SetActive(false);
         }
+        if(ejecutandoFregona && fregonaEvento.completado)
+        {
+
+            ejecutandoFregona = false;
+            eventoCompletado = true;
+            fregonaPlacehorlder.SetActive(true);
+            fregonaEvento.gameObject.SetActive(false);
+        }
 
         //cualquier evento completado
         if (eventoCompletado)
@@ -78,9 +90,16 @@ public class ActivarEvento : MonoBehaviour
                 listaMarcos[eventNum].SetActive(true);
                 ejecutandoFogones = true;
                 break;
-            //case 1:
-            //    Debug.Log("Ejecutando evento 1");
-            //    break;
+            case 1:
+                //fregona
+                Debug.Log("Ejecutando evento 1: fregona");
+                ejecutandoFregona=true;
+                fregonaPlacehorlder.SetActive(false);
+                fregonaEvento.gameObject.SetActive(true);
+
+
+
+                break;
             //case 2:
             //    Debug.Log("Ejecutando evento 2");
             //    break;
@@ -96,10 +115,6 @@ public class ActivarEvento : MonoBehaviour
                 break;
         }
 
-        if (eventNum >= 0 && eventNum < listaMarcos.Count)
-        {
-            listaMarcos[eventNum].SetActive(true);
-        }
         pendingEvent = false;
     }
 }
