@@ -9,7 +9,7 @@ public class menuHandler : MonoBehaviour
     [SerializeField] Button btnOpciones;
     [SerializeField] Button btnSalir;
     [SerializeField] Button btnVolver;
-    [SerializeField] TextMeshProUGUI instrucciones;
+    //[SerializeField] TextMeshProUGUI instrucciones;
 
     void OnEnable()
     {
@@ -17,7 +17,7 @@ public class menuHandler : MonoBehaviour
         btnOpciones.gameObject.SetActive(true);
         btnSalir.gameObject.SetActive(true);
         btnVolver.gameObject.SetActive(false);
-        instrucciones.gameObject.SetActive(false);
+        //instrucciones.gameObject.SetActive(false);
     }
 
     public void clickJugar()
@@ -33,7 +33,7 @@ public class menuHandler : MonoBehaviour
         btnOpciones.gameObject.SetActive(false);
         btnSalir.gameObject.SetActive(false);
         btnVolver.gameObject.SetActive(true);
-        instrucciones.gameObject.SetActive(true);
+        //instrucciones.gameObject.SetActive(true);
     }
 
     public void clickSalir()
@@ -49,6 +49,6 @@ public class menuHandler : MonoBehaviour
         btnOpciones.gameObject.SetActive(true);
         btnSalir.gameObject.SetActive(true);
         btnVolver.gameObject.SetActive(false);
-        instrucciones.gameObject.SetActive(false);
+        //instrucciones.gameObject.SetActive(false);
     }
 }
