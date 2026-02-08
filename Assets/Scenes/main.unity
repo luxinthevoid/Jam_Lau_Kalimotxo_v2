@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &227140671
 Transform:
   m_ObjectHideFlags: 0
@@ -692,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &363292276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2136,6 +2136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::eventoFregona
   mancha: {fileID: 6264784586281416954, guid: 3bab60b01c19ca14ab443f6aef49502c, type: 3}
   freg: {fileID: 226798375}
+  completado: 0
 --- !u!4 &1205618912
 Transform:
   m_ObjectHideFlags: 0
