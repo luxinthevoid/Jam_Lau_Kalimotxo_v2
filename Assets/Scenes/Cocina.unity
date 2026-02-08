@@ -4625,6 +4625,7 @@ GameObject:
   - component: {fileID: 1329283137}
   - component: {fileID: 1329283142}
   - component: {fileID: 1329283143}
+  - component: {fileID: 1329283144}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Player
@@ -4646,6 +4647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   speed: 2.87
   eventoActivo: 0
+  puedesMoverte: 1
   barraPep: {fileID: 772950364}
   eventosHand: {fileID: 990054930}
   origen: {fileID: 0}
@@ -4808,6 +4810,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1329283144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329283136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f094d590c9edc43b9ed25a5d43d802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::detectarMovimiento
+  rb: {fileID: 1329283139}
+  animator: {fileID: 1329283143}
 --- !u!1 &1341896418
 GameObject:
   m_ObjectHideFlags: 0
