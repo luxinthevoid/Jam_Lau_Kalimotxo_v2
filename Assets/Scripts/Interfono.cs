@@ -8,6 +8,11 @@ public class Interfono : MonoBehaviour
     bool responder = false;
     bool oscilar = false;
 
+    void OnEnable()
+    {
+        responder = false;
+        cajaBoton.enabled = false;
+    }
 
     void Update()
     {

@@ -42,7 +42,7 @@ public class eventosHandler : MonoBehaviour
                 enEvento = true;
                 player.eventoActivo = enEvento;
                 int randomEvent = Random.Range(0, listaDeEventos.Count);
-                StartCoroutine(startEvent(randomEvent));//cambiar por randomEvent cuando termine el testing
+                StartCoroutine(startEvent(1));//cambiar por randomEvent cuando termine el testing
             }
         }
     }
